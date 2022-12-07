@@ -1,5 +1,4 @@
 import { tasty } from 'tastycss'
-import { Button } from '../button'
 import { InputField } from '../input'
 
 const SearchBarContainer = tasty({
@@ -18,10 +17,9 @@ export function SearchBar(props: SearchBarProps) {
   return (
     <SearchBarContainer>
       <InputField
+        placeholder='Search for images'
         onChange={(e) => props.onChange(e.target.value)}
-        flatRight={true}
       />
-      <Button text='Search' borderLeft='0px' leftFlat={true} />
     </SearchBarContainer>
   )
 }
